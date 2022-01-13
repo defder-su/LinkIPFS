@@ -1,0 +1,6 @@
+{
+	"name": "LinkIPFS",
+	"description": "Resolves /ipfs/<address> and /ipns/<address> links.",
+	"default": "enabled",
+	"rev": 1
+}

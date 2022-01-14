@@ -2,6 +2,7 @@ import os
 import re
 import gevent
 import html
+import socket
 
 from Plugin import PluginManager
 from Config import config
@@ -15,9 +16,9 @@ from urllib.error import URLError, HTTPError
 class UiRequestPlugin(object):
     def actionWrapper(self, path, extra_headers=None):
         if path.startswith("/ipfs/") or path.startswith("/ipns/"):
-        	local_url = "http://127.0.0.1:8080%s" % (path)
-        	gateway_url = "https://ipfs.io%s" % (path)
+        	local_url = "http://127.0.0.1:8080%s" % (quote(path))
         	local_timeout = 3
+        	gateway_url = "https://ipfs.io%s" % (quote(path))
         	try:
         		request = Request(local_url)
         		response = urlopen(request, timeout=local_timeout)

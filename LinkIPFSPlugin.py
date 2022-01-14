@@ -17,9 +17,10 @@ class UiRequestPlugin(object):
         if path.startswith("/ipfs/") or path.startswith("/ipns/"):
         	local_url = "http://127.0.0.1:8080%s" % (path)
         	gateway_url = "https://ipfs.io%s" % (path)
+        	local_timeout = 3
         	try:
         		request = Request(local_url)
-        		response = urlopen(request, timeout=1)
+        		response = urlopen(request, timeout=local_timeout)
         		return self.actionRedirect302(local_url)
         	except (HTTPError, URLError) as err:
         		return self.actionRedirect302(gateway_url)

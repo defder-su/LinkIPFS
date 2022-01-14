@@ -22,9 +22,14 @@ class UiRequestPlugin(object):
         	try:
         		request = Request(local_url)
         		response = urlopen(request, timeout=local_timeout)
+        	except (HTTPError) as err:
         		return self.actionRedirect302(local_url)
-        	except (HTTPError, URLError) as err:
+        	except (URLError) as err:
         		return self.actionRedirect302(gateway_url)
+        	except socket.timeout:
+        		return self.actionRedirect302(gateway_url)
+        	else:
+        		return self.actionRedirect302(local_url)
         return super(UiRequestPlugin, self).actionWrapper(path, extra_headers)
     def actionRedirect302(self, url):
         self.start_response('302 Redirect', [('Location', str(url))])

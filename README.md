@@ -8,4 +8,3 @@ Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePac
 
 # TODO
 It should be build-in plugin in all mainstream ZeroNet forks.
-Check links like /ipfs/<hash>/file.zip/1 and /ipfs/<hash>/.

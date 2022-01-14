@@ -13,19 +13,17 @@ from urllib.error import URLError, HTTPError
 
 @PluginManager.registerTo("UiRequest")
 class UiRequestPlugin(object):
-    def actionSiteMedia(self, path, **kwargs):
-        if path.startswith("/media/ipfs/") or path.startswith("/media/ipns/"):
-        	path_parts = self.parsePath(path)
-        	ipfs_path = "/%s/%s" % (path_parts["address"], path_parts["inner_path"])
-        	local_url = "http://127.0.0.1:8080%s" % (ipfs_path)
-        	gateway_url = "https://ipfs.io%s" % (ipfs_path)        	
+    def actionWrapper(self, path, extra_headers=None):
+        if path.startswith("/ipfs/") or path.startswith("/ipns/"):
+        	local_url = "http://127.0.0.1:8080%s" % (path)
+        	gateway_url = "https://ipfs.io%s" % (path)
         	try:
         		request = Request(local_url)
         		response = urlopen(request, timeout=1)
         		return self.actionRedirect302(local_url)
         	except (HTTPError, URLError) as err:
         		return self.actionRedirect302(gateway_url)
-        return super(UiRequestPlugin, self).actionSiteMedia(path, **kwargs)
+        return super(UiRequestPlugin, self).actionWrapper(path, extra_headers)
     def actionRedirect302(self, url):
         self.start_response('302 Redirect', [('Location', str(url))])
         yield self.formatRedirect302(url)

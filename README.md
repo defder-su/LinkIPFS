@@ -7,4 +7,6 @@ Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites, redirec
 Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) as an example.
 
 # TODO
-It should be build-in plugin in all mainstream ZeroNet forks.
+- Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
+- Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
+- It should be built in all mainstream ZeroNet forks

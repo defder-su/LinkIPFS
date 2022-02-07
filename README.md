@@ -10,3 +10,6 @@ Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePac
 - Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
 - Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
 - It should be built in all mainstream ZeroNet forks
+
+# Discussions
+- [About images in blogs](http://127.0.0.1:43110/1MaQ4W5D6G52TpBfPACU9k9QcB1DxvHZ5v/?Post:35#Comments)

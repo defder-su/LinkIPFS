@@ -9,6 +9,8 @@ Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePac
 # TODO
 - Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
 - Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
+- Add visited resources to [MFS](https://docs.ipfs.io/concepts/file-systems/#mutable-file-system-mfs) `/zeronet` (what limits?), represent such resources in [Files](http://127.0.0.1:43110/1HELLoE3sFD9569CLCbHEAVqvqV7U2Ri9d/?Files).
+- Embedded IPFS node? (seeing [discussion](https://github.com/defder-su/LinkIPFS/issues/1))
 - It should be built in all mainstream ZeroNet forks
 
 # Discussions

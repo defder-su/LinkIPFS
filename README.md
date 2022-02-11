@@ -16,4 +16,5 @@ Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePac
 
 # Discussions
 - [Resolve /ipfs/<address> and /ipns/<address> links](https://github.com/ZeroNetX/ZeroNet/issues/134)
+- [Lokinet for private transport](https://github.com/ipfs/notes/issues/431)
 - [About images in blogs](http://127.0.0.1:43110/1MaQ4W5D6G52TpBfPACU9k9QcB1DxvHZ5v/?Post:35#Comments)

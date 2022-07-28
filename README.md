@@ -2,14 +2,15 @@
 Site developers can use `/ipfs/<address>` and `/ipns/<address>` links by hosting in own domain, setting an IPFS gateway. But how can it be implemeted in ZeroNet?
 
 # LinkIPFS
-Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites, redirecting to local IPFS gateway (if it's available via port 8080 and "always Tor mode" is not selected) or, alternatively, to [ipfs.io](https://ipfs.io).
+Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites, redirecting to local IPFS gateway (if it's available via port 8080 and "always Tor mode" is not selected) or, alternatively, to [ipfs.io](https://ipfs.io). There is [demo zite](http://127.0.0.1:43110/169o2eMRjzAF5PZGZGLRCpzsGGDHDWgSm9) available.
 
-Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) as an example.
+# Development
+- Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) as an example
 
 # TODO
 - Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
 - Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
-- Add visited resources to [MFS](https://docs.ipfs.io/concepts/file-systems/#mutable-file-system-mfs) `/zeronet` (what limits?), represent such resources in [Files](http://127.0.0.1:43110/1HELLoE3sFD9569CLCbHEAVqvqV7U2Ri9d/?Files).
+- Add visited resources to [MFS](https://docs.ipfs.io/concepts/file-systems/#mutable-file-system-mfs) `/zeronet` (follow limits?), represent such resources in [Files](http://127.0.0.1:43110/1HELLoE3sFD9569CLCbHEAVqvqV7U2Ri9d/?Files).
 - Pin all visited directories (and subdirectories) with `--recursive=false` flag.
 - Embedded IPFS node? (seeing [discussion](https://github.com/defder-su/LinkIPFS/issues/1))
 - It should be built in all mainstream ZeroNet forks

@@ -5,15 +5,16 @@ Site developers can use `/ipfs/<address>` and `/ipns/<address>` links by hosting
 Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites, redirecting to local IPFS gateway (if it's available via port 8080 and "always Tor mode" is not selected) or, alternatively, to [ipfs.io](https://ipfs.io). There is [demo zite](http://127.0.0.1:43110/169o2eMRjzAF5PZGZGLRCpzsGGDHDWgSm9) available.
 
 # Development
-- Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) as an example
+Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) and [Cors](https://github.com/ZeroNetX/ZeroNet-Plugins/tree/master/Cors) as examples.
 
 # TODO
-- Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
-- Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
-- Add visited resources to [MFS](https://docs.ipfs.io/concepts/file-systems/#mutable-file-system-mfs) `/zeronet` (follow limits?), represent such resources in [Files](http://127.0.0.1:43110/1HELLoE3sFD9569CLCbHEAVqvqV7U2Ri9d/?Files).
-- Pin all visited directories (and subdirectories) with `--recursive=false` flag.
-- Embedded IPFS node? (seeing [discussion](https://github.com/defder-su/LinkIPFS/issues/1))
-- It should be built in all mainstream ZeroNet forks
+- [ ] Proxy requests (not redirect), represent html pages inside Zero Frame, disabling AJAX
+- [ ] Support `/raw/ipfs/<address>` and `/raw/ipns/<address>` links
+- [ ] Read settings like `local_gateway_port`, `external_gateway` from `zeronet.conf` (section `ipfs`)
+- [ ] Add visited resources to [MFS](https://docs.ipfs.io/concepts/file-systems/#mutable-file-system-mfs) `/zeronet` (follow limits?), represent such resources in [Files](http://127.0.0.1:43110/1HELLoE3sFD9569CLCbHEAVqvqV7U2Ri9d/?Files).
+- [ ] Pin all visited directories (and subdirectories) with `--recursive=false` flag
+- [ ] Embedded IPFS node? (seeing [discussion](https://github.com/defder-su/LinkIPFS/issues/1))
+- [ ] It should be built in all mainstream ZeroNet forks
 
 # Discussions
 - [Resolve /ipfs/<address> and /ipns/<address> links](https://github.com/ZeroNetX/ZeroNet/issues/134)

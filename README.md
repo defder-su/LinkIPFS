@@ -1,8 +1,9 @@
 # Intro
 Site developers can use `/ipfs/<address>` and `/ipns/<address>` links by hosting in own domain, setting an IPFS gateway. But how can it be implemeted in ZeroNet?
 
-# LinkIPFS beta (redirector)
-Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites, redirecting to local IPFS gateway (if it's available via port 8080 and "always Tor mode" is not selected) or, alternatively, to [ipfs.io](https://ipfs.io). There is [demo zite](http://127.0.0.1:43110/169o2eMRjzAF5PZGZGLRCpzsGGDHDWgSm9) available.
+# LinkIPFS
+Resolves `/ipfs/<address>` and `/ipns/<address>` links in ZeroNet sites.
+For now, [beta release](https://github.com/defder-su/LinkIPFS/releases/tag/v0.1-redirector) just redirects such links.
 
 # Development
 Used [FilePack](https://github.com/HelloZeroNet/ZeroNet/tree/py3/plugins/FilePack) and [Cors](https://github.com/ZeroNetX/ZeroNet-Plugins/tree/master/Cors) as examples.
